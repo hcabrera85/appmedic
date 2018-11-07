@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date time:</strong>
+  <%= @record.date_time %>
+</p>
+
+<p>
+  <strong>Symptom:</strong>
+  <%= @record.symptom %>
+</p>
+
+<p>
+  <strong>Diagnostic:</strong>
+  <%= @record.diagnostic %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @record.notes %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @record.created_by %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @record.status %>
+</p>
+
+<p>
+  <strong>Doctor:</strong>
+  <%= @record.doctor %>
+</p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @record.patient %>
+</p>
+
+<%= link_to 'Edit', edit_record_path(@record) %> |
+<%= link_to 'Back', records_path %>

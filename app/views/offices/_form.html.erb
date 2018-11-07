@@ -1,0 +1,47 @@
+<%= form_with(model: office, local: true) do |form| %>
+  <% if office.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(office.errors.count, "error") %> prohibited this office from being saved:</h2>
+
+      <ul>
+      <% office.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :office_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telephone %>
+    <%= form.text_field :telephone, id: :office_telephone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_area :address, id: :office_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :registration_number %>
+    <%= form.text_field :registration_number, id: :office_registration_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :office_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_id %>
+    <%= form.text_field :company_id, id: :office_company_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

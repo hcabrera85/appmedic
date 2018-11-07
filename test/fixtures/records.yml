@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_time: 2018-11-07 13:54:45
+  symptom: MyText
+  diagnostic: MyText
+  notes: MyText
+  created_by: MyString
+  status: MyString
+  doctor: one
+  patient: one
+
+two:
+  date_time: 2018-11-07 13:54:45
+  symptom: MyText
+  diagnostic: MyText
+  notes: MyText
+  created_by: MyString
+  status: MyString
+  doctor: two
+  patient: two

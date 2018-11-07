@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Assistants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Date of birth</th>
+      <th>Marital</th>
+      <th>Idcard</th>
+      <th>Nacionality</th>
+      <th>Occupation</th>
+      <th>Telephone</th>
+      <th>Address</th>
+      <th>Email</th>
+      <th>Contactperson</th>
+      <th>Status</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assistants.each do |assistant| %>
+      <tr>
+        <td><%= assistant.name %></td>
+        <td><%= assistant.gender %></td>
+        <td><%= assistant.date_of_birth %></td>
+        <td><%= assistant.marital %></td>
+        <td><%= assistant.idcard %></td>
+        <td><%= assistant.nacionality %></td>
+        <td><%= assistant.occupation %></td>
+        <td><%= assistant.telephone %></td>
+        <td><%= assistant.address %></td>
+        <td><%= assistant.email %></td>
+        <td><%= assistant.contactperson %></td>
+        <td><%= assistant.status %></td>
+        <td><%= assistant.user %></td>
+        <td><%= link_to 'Show', assistant %></td>
+        <td><%= link_to 'Edit', edit_assistant_path(assistant) %></td>
+        <td><%= link_to 'Destroy', assistant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assistant', new_assistant_path %>

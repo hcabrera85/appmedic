@@ -1,0 +1,82 @@
+<%= form_with(model: patient, local: true) do |form| %>
+  <% if patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+      <% patient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :patient_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_area :gender, id: :patient_gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_of_birth %>
+    <%= form.date_select :date_of_birth, id: :patient_date_of_birth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :marital %>
+    <%= form.text_field :marital, id: :patient_marital %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idcard %>
+    <%= form.text_field :idcard, id: :patient_idcard %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nacionality %>
+    <%= form.text_field :nacionality, id: :patient_nacionality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :occupation %>
+    <%= form.text_field :occupation, id: :patient_occupation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telephone %>
+    <%= form.text_field :telephone, id: :patient_telephone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :patient_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :patient_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contactperson %>
+    <%= form.text_field :contactperson, id: :patient_contactperson %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status, id: :patient_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :patient_user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
